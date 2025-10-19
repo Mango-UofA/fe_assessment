@@ -2,11 +2,13 @@ import React from "react";
 import { Document, Page, Text, View, Image } from "@react-pdf/renderer";
 import styles from "./DrillingLogStyles";
 
-const drillIcon = `${process.env.PUBLIC_URL}/assets/drill.png`;
-const boredmLogo = `${process.env.PUBLIC_URL}/assets/logo.png`;
-const waterLogo = `${process.env.PUBLIC_URL}/assets/waterLogo.png`;
-
 const DrillingLog = () => {
+  const assetOrigin =
+    typeof window !== "undefined" && window.location ? window.location.origin : "";
+  const drillIcon = `${assetOrigin}/assets/drill.png`;
+  const boredmLogo = `${assetOrigin}/assets/logo.png`;
+  const waterLogo = `${assetOrigin}/assets/waterLogo.png`;
+
   const topRows = [
     {
       left: { label: "Drilling Firm:", value: "BoreDM Drilling" },
